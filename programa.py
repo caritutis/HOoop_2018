@@ -6,12 +6,11 @@ jose=cliente(2)
 jose.modificarcategoria("preferencial")
 jose.imprimir()
 Fp=FilaPreferencial()
-Fpn=FilaPreferencial()
 Fg=FilaGeneral()
 Fp.insertar(jose)
 Fg.insertar(pepe)
 print("cantidad de prefernecial=",Fp.enfila)
-#simulacion de ingreso de clientes
+#simulacion de ingreso de clientes (hay que pensar mejor la simulacion)
 #se piensa clientes pares como generales e impares como preferenciales
 maxenfila=0
 for i in range(1,100,1):
@@ -25,7 +24,7 @@ for i in range(1,100,1):
         pepe.modificarcategoria("preferencial")
         Fp.insertar(pepe)
     maxenfila=maxenfila+1    
-    if(maxenfila==6):    
+#    if(maxenfila==6):    
         Fp.abrircajanueva(maxenfila,Fpn)
         Fpn.insertar(pepe)
     maxenfila=0
